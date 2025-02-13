@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Фон -->
+  <rect width="800" height="600" fill="#f5f6fa"/>
+  
+  <!-- Котел -->
+  <g transform="translate(200,50)">
+    <rect x="0" y="0" width="400" height="500" fill="#ffffff" stroke="#34495e" stroke-width="6" rx="20"/>
+    <!-- Панель управления -->
+    <rect x="50" y="50" width="300" height="100" fill="#e74c3c" rx="10"/>
+    <!-- Дисплей -->
+    <rect x="70" y="70" width="260" height="60" fill="#ffffff"/>
+    
+    <!-- Трубы -->
+    <g stroke="#e74c3c" stroke-width="6" fill="none">
+      <path d="M0,150 L-50,150"/>
+      <path d="M400,150 L450,150"/>
+      <path d="M0,350 L-50,350"/>
+      <path d="M400,350 L450,350"/>
+    </g>
+    
+    <!-- Индикаторы -->
+    <circle cx="50" cy="400" r="10" fill="#27ae60"/>
+    <circle cx="90" cy="400" r="10" fill="#f1c40f"/>
+  </g>
+</svg>
