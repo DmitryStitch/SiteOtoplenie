@@ -3,19 +3,19 @@ from wtforms import StringField, TextAreaField, SelectField
 from wtforms.validators import DataRequired, Email
 
 class ContactForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired()])
+    name = StringField('Имя', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    phone = StringField('Phone', validators=[DataRequired()])
-    message = TextAreaField('Message', validators=[DataRequired()])
+    phone = StringField('Телефон', validators=[DataRequired()])
+    message = TextAreaField('Сообщение', validators=[DataRequired()])
 
 class QuoteForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired()])
+    name = StringField('Имя', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    phone = StringField('Phone', validators=[DataRequired()])
-    service_type = SelectField('Service Type', choices=[
-        ('heating_installation', 'Heating System Installation'),
-        ('maintenance', 'System Maintenance'),
-        ('repair', 'Repair Services'),
-        ('consultation', 'Consultation')
+    phone = StringField('Телефон', validators=[DataRequired()])
+    service_type = SelectField('Тип услуги', choices=[
+        ('heating_installation', 'Установка системы отопления'),
+        ('maintenance', 'Техническое обслуживание'),
+        ('repair', 'Ремонтные работы'),
+        ('consultation', 'Консультация')
     ])
-    details = TextAreaField('Project Details', validators=[DataRequired()])
+    details = TextAreaField('Детали проекта', validators=[DataRequired()])
