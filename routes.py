@@ -1,7 +1,8 @@
 from flask import render_template, request, flash, redirect, url_for
-from app import app, mail
+from app import app, mail, db
 from flask_mail import Message
 from forms import ContactForm, QuoteForm
+from models import ContactRequest, QuoteRequest
 
 @app.route('/')
 def index():
@@ -23,8 +24,19 @@ def portfolio():
 def contacts():
     form = ContactForm()
     quote_form = QuoteForm()
-    
+
     if form.validate_on_submit():
+        # Создаем запись в базе данных
+        contact_request = ContactRequest(
+            name=form.name.data,
+            email=form.email.data,
+            phone=form.phone.data,
+            message=form.message.data
+        )
+        db.session.add(contact_request)
+        db.session.commit()
+
+        # Отправляем email
         msg = Message('New Contact Form Submission',
                      sender=form.email.data,
                      recipients=['your-email@gmail.com'])
@@ -37,8 +49,20 @@ def contacts():
         mail.send(msg)
         flash('Thank you for your message. We will contact you soon!', 'success')
         return redirect(url_for('contacts'))
-        
+
     if quote_form.validate_on_submit():
+        # Создаем запись в базе данных
+        quote_request = QuoteRequest(
+            name=quote_form.name.data,
+            email=quote_form.email.data,
+            phone=quote_form.phone.data,
+            service_type=quote_form.service_type.data,
+            details=quote_form.details.data
+        )
+        db.session.add(quote_request)
+        db.session.commit()
+
+        # Отправляем email
         msg = Message('New Quote Request',
                      sender=quote_form.email.data,
                      recipients=['your-email@gmail.com'])
@@ -53,5 +77,5 @@ def contacts():
         mail.send(msg)
         flash('Thank you for your quote request. We will contact you shortly!', 'success')
         return redirect(url_for('contacts'))
-        
+
     return render_template('contacts.html', form=form, quote_form=quote_form)
