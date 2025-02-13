@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container mt-5 pt-5">
@@ -9,62 +10,17 @@
             <div class="contact-info p-4 bg-light rounded">
                 <h3>Связаться с нами</h3>
                 <p class="lead">Мы готовы помочь с любыми вопросами по отоплению</p>
-
-                <div class="mt-4">
-                    <h5><i class="bi bi-geo-alt-fill text-primary me-2"></i>Адрес</h5>
-                    <p>ул. Тепловая, 123<br>Москва, 123456</p>
-                </div>
-
-                <div class="mt-4">
-                    <h5><i class="bi bi-telephone-fill text-primary me-2"></i>Телефон</h5>
-                    <p>8 (800) 123-45-67</p>
-                </div>
-
-                <div class="mt-4">
-                    <h5><i class="bi bi-envelope-fill text-primary me-2"></i>Email</h5>
-                    <p>info@teplopro.ru</p>
-                </div>
-
-                <div class="mt-4">
-                    <h5><i class="bi bi-chat-fill text-primary me-2"></i>Мессенджеры</h5>
-                    <div class="social-icons mt-2">
-                        <a href="#" class="text-dark me-3"><i class="bi bi-telegram fs-4"></i></a>
-                        <a href="#" class="text-dark me-3"><i class="bi bi-whatsapp fs-4"></i></a>
-                        <a href="#" class="text-dark me-3"><i class="bi bi-telephone-fill fs-4"></i></a>
-                    </div>
-                </div>
-
-                <div class="mt-4">
-                    <h5><i class="bi bi-clock-fill text-primary me-2"></i>Режим работы</h5>
-                    <p>Понедельник - Пятница: 8:00 - 18:00<br>
-                    Суббота: 9:00 - 14:00<br>
-                    Воскресенье: Выходной</p>
-                </div>
+                <!-- Контактная информация -->
             </div>
         </div>
 
         <div class="col-md-6 mb-4">
             <div class="contact-form p-4 bg-light rounded">
                 <h3>Отправить сообщение</h3>
-                <form method="POST" class="needs-validation" novalidate>
-                    {{ form.hidden_tag() }}
-                    <div class="mb-3">
-                        {{ form.name.label(class="form-label") }}
-                        {{ form.name(class="form-control") }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.email.label(class="form-label") }}
-                        {{ form.email(class="form-control") }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.phone.label(class="form-label") }}
-                        {{ form.phone(class="form-control") }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.message.label(class="form-label") }}
-                        {{ form.message(class="form-control", rows="4") }}
-                    </div>
-                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ contact_form|crispy }}
+                    <button type="submit" name="contact_submit" class="btn btn-primary">Отправить сообщение</button>
                 </form>
             </div>
         </div>
@@ -74,42 +30,12 @@
         <div class="col-12">
             <h3 class="text-center mb-4">Заказать расчет</h3>
             <div class="quote-form p-4 bg-light rounded">
-                <form method="POST" class="needs-validation" novalidate>
-                    {{ quote_form.hidden_tag() }}
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            {{ quote_form.name.label(class="form-label") }}
-                            {{ quote_form.name(class="form-control") }}
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            {{ quote_form.email.label(class="form-label") }}
-                            {{ quote_form.email(class="form-control") }}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            {{ quote_form.phone.label(class="form-label") }}
-                            {{ quote_form.phone(class="form-control") }}
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            {{ quote_form.service_type.label(class="form-label") }}
-                            {{ quote_form.service_type(class="form-control") }}
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        {{ quote_form.details.label(class="form-label") }}
-                        {{ quote_form.details(class="form-control", rows="4") }}
-                    </div>
-                    <button type="submit" class="btn btn-primary">Запросить расчет</button>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ quote_form|crispy }}
+                    <button type="submit" name="quote_submit" class="btn btn-primary">Запросить расчет</button>
                 </form>
             </div>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-12">
-            <h3 class="text-center mb-4">Как нас найти</h3>
-            <div id="map" style="height: 400px;" class="rounded shadow"></div>
         </div>
     </div>
 </div>
