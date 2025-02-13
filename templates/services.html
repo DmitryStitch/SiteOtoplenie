@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <h1 class="text-center mb-5">Our Services</h1>
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e" alt="Heating Installation" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2>Heating System Installation</h2>
+            <p class="lead">Professional installation of modern heating systems</p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Central heating systems</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Underfloor heating</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Heat pumps</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Boiler installation</li>
+            </ul>
+            <a href="{{ url_for('contacts') }}" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4" alt="Maintenance Service" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h2>Maintenance Services</h2>
+            <p class="lead">Regular maintenance to ensure optimal performance</p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Annual system checks</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Performance optimization</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Filter replacement</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Safety inspections</li>
+            </ul>
+            <a href="{{ url_for('contacts') }}" class="btn btn-primary">Schedule Service</a>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1621905252887-eedc8b5bbe62" alt="Repair Services" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2>Repair Services</h2>
+            <p class="lead">Quick and reliable repair solutions</p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>24/7 emergency repairs</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Boiler repairs</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>System diagnostics</li>
+                <li><i class="bi bi-check2-circle text-primary me-2"></i>Component replacement</li>
+            </ul>
+            <a href="{{ url_for('contacts') }}" class="btn btn-primary">Request Repair</a>
+        </div>
+    </div>
+
+    <div class="pricing py-5">
+        <h2 class="text-center mb-4">Service Packages</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Basic</h3>
+                        <div class="display-4 my-4">$99</div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">Annual inspection</li>
+                            <li class="mb-2">Basic maintenance</li>
+                            <li class="mb-2">Phone support</li>
+                        </ul>
+                        <a href="{{ url_for('contacts') }}" class="btn btn-outline-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Premium</h3>
+                        <div class="display-4 my-4">$199</div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">Bi-annual inspection</li>
+                            <li class="mb-2">Full maintenance</li>
+                            <li class="mb-2">24/7 support</li>
+                        </ul>
+                        <a href="{{ url_for('contacts') }}" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Enterprise</h3>
+                        <div class="display-4 my-4">Custom</div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">Custom schedule</li>
+                            <li class="mb-2">Priority service</li>
+                            <li class="mb-2">Dedicated support</li>
+                        </ul>
+                        <a href="{{ url_for('contacts') }}" class="btn btn-outline-primary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="container text-center">
+        <h1 class="display-4">Professional Heating Solutions</h1>
+        <p class="lead">Expert installation and maintenance of heating systems for your comfort</p>
+        <a href="{{ url_for('contacts') }}" class="btn btn-primary btn-lg">Get a Quote</a>
+    </div>
+</section>
+
+<section class="services py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-tools display-4 text-primary"></i>
+                        <h5 class="card-title mt-3">Installation</h5>
+                        <p class="card-text">Professional installation of heating systems for residential and commercial properties.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-gear display-4 text-primary"></i>
+                        <h5 class="card-title mt-3">Maintenance</h5>
+                        <p class="card-text">Regular maintenance and servicing to keep your heating system running efficiently.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-wrench display-4 text-primary"></i>
+                        <h5 class="card-title mt-3">Repairs</h5>
+                        <p class="card-text">Quick and reliable repair services for all types of heating systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose-us py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose Us</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <i class="bi bi-award display-4 text-primary"></i>
+                    <h5 class="mt-3">Experience</h5>
+                    <p>Over 15 years of industry experience</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <i class="bi bi-clock display-4 text-primary"></i>
+                    <h5 class="mt-3">24/7 Service</h5>
+                    <p>Available around the clock for emergencies</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <i class="bi bi-shield-check display-4 text-primary"></i>
+                    <h5 class="mt-3">Guaranteed</h5>
+                    <p>100% satisfaction guarantee on all work</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <i class="bi bi-people display-4 text-primary"></i>
+                    <h5 class="mt-3">Expert Team</h5>
+                    <p>Certified and skilled professionals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta py-5">
+    <div class="container text-center">
+        <h2>Ready to Get Started?</h2>
+        <p class="lead">Contact us today for a free consultation and quote</p>
+        <a href="{{ url_for('contacts') }}" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
+</section>
+{% endblock %}
