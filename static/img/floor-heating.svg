@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Пол -->
+  <rect width="800" height="600" fill="#f5f6fa"/>
+  
+  <!-- Теплый пол -->
+  <g transform="translate(100,100)" fill="none" stroke="#e74c3c" stroke-width="4">
+    <!-- Змеевик -->
+    <path d="M0,0 H600 V100 H0 V200 H600 V300 H0 V400" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Плитка -->
+  <g stroke="#34495e" stroke-width="1" fill="none">
+    <g id="tile-row">
+      <rect x="100" y="100" width="100" height="100"/>
+      <rect x="200" y="100" width="100" height="100"/>
+      <rect x="300" y="100" width="100" height="100"/>
+      <rect x="400" y="100" width="100" height="100"/>
+      <rect x="500" y="100" width="100" height="100"/>
+      <rect x="600" y="100" width="100" height="100"/>
+    </g>
+    <use href="#tile-row" y="100"/>
+    <use href="#tile-row" y="200"/>
+    <use href="#tile-row" y="300"/>
+    <use href="#tile-row" y="400"/>
+  </g>
+</svg>
