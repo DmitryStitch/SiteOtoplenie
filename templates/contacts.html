@@ -2,41 +2,50 @@
 
 {% block content %}
 <div class="container mt-5 pt-5">
-    <h1 class="text-center mb-5">Contact Us</h1>
+    <h1 class="text-center mb-5">Контакты</h1>
 
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="contact-info p-4 bg-light rounded">
-                <h3>Get in Touch</h3>
-                <p class="lead">We're here to help with all your heating needs</p>
-                
+                <h3>Связаться с нами</h3>
+                <p class="lead">Мы готовы помочь с любыми вопросами по отоплению</p>
+
                 <div class="mt-4">
-                    <h5><i class="bi bi-geo-alt-fill text-primary me-2"></i>Address</h5>
-                    <p>123 Heating Street<br>City, State 12345</p>
+                    <h5><i class="bi bi-geo-alt-fill text-primary me-2"></i>Адрес</h5>
+                    <p>ул. Тепловая, 123<br>Москва, 123456</p>
                 </div>
-                
+
                 <div class="mt-4">
-                    <h5><i class="bi bi-telephone-fill text-primary me-2"></i>Phone</h5>
-                    <p>(555) 123-4567</p>
+                    <h5><i class="bi bi-telephone-fill text-primary me-2"></i>Телефон</h5>
+                    <p>8 (800) 123-45-67</p>
                 </div>
-                
+
                 <div class="mt-4">
                     <h5><i class="bi bi-envelope-fill text-primary me-2"></i>Email</h5>
-                    <p>info@heatingpro.com</p>
+                    <p>info@teplopro.ru</p>
                 </div>
-                
+
                 <div class="mt-4">
-                    <h5><i class="bi bi-clock-fill text-primary me-2"></i>Working Hours</h5>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
-                    Saturday: 9:00 AM - 2:00 PM<br>
-                    Sunday: Closed</p>
+                    <h5><i class="bi bi-chat-fill text-primary me-2"></i>Мессенджеры</h5>
+                    <div class="social-icons mt-2">
+                        <a href="#" class="text-dark me-3"><i class="bi bi-telegram fs-4"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="bi bi-whatsapp fs-4"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="bi bi-telephone-fill fs-4"></i></a>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h5><i class="bi bi-clock-fill text-primary me-2"></i>Режим работы</h5>
+                    <p>Понедельник - Пятница: 8:00 - 18:00<br>
+                    Суббота: 9:00 - 14:00<br>
+                    Воскресенье: Выходной</p>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6 mb-4">
             <div class="contact-form p-4 bg-light rounded">
-                <h3>Send Us a Message</h3>
+                <h3>Отправить сообщение</h3>
                 <form method="POST" class="needs-validation" novalidate>
                     {{ form.hidden_tag() }}
                     <div class="mb-3">
@@ -55,7 +64,7 @@
                         {{ form.message.label(class="form-label") }}
                         {{ form.message(class="form-control", rows="4") }}
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Отправить сообщение</button>
                 </form>
             </div>
         </div>
@@ -63,7 +72,7 @@
 
     <div class="row mt-4">
         <div class="col-12">
-            <h3 class="text-center mb-4">Request a Quote</h3>
+            <h3 class="text-center mb-4">Заказать расчет</h3>
             <div class="quote-form p-4 bg-light rounded">
                 <form method="POST" class="needs-validation" novalidate>
                     {{ quote_form.hidden_tag() }}
@@ -91,7 +100,7 @@
                         {{ quote_form.details.label(class="form-label") }}
                         {{ quote_form.details(class="form-control", rows="4") }}
                     </div>
-                    <button type="submit" class="btn btn-primary">Request Quote</button>
+                    <button type="submit" class="btn btn-primary">Запросить расчет</button>
                 </form>
             </div>
         </div>
@@ -99,7 +108,7 @@
 
     <div class="row mt-5">
         <div class="col-12">
-            <h3 class="text-center mb-4">Our Location</h3>
+            <h3 class="text-center mb-4">Как нас найти</h3>
             <div id="map" style="height: 400px;" class="rounded shadow"></div>
         </div>
     </div>
