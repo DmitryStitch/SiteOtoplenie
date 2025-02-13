@@ -6,7 +6,7 @@
 
     <div class="row mb-5">
         <div class="col-md-6">
-            <img src="/static/img/radiator-installation.svg" alt="Монтаж радиаторов отопления" class="img-fluid rounded shadow">
+            <img src="{% static 'img/radiator-installation.svg' %}" alt="Монтаж радиаторов отопления" class="img-fluid rounded shadow">
         </div>
         <div class="col-md-6">
             <h2>Монтаж систем отопления</h2>
@@ -17,13 +17,13 @@
                 <li><i class="bi bi-check2-circle text-primary me-2"></i>Тепловые насосы</li>
                 <li><i class="bi bi-check2-circle text-primary me-2"></i>Установка котлов</li>
             </ul>
-            <a href="{{ url_for('contacts') }}" class="btn btn-primary">Получить расчет</a>
+            <a href="{% url 'contacts' %}" class="btn btn-primary">Получить расчет</a>
         </div>
     </div>
 
     <div class="row mb-5">
         <div class="col-md-6 order-md-2">
-            <img src="/static/img/boiler-maintenance.svg" alt="Обслуживание котельного оборудования" class="img-fluid rounded shadow">
+            <img src="{% static 'img/boiler-maintenance.svg' %}" alt="Обслуживание котельного оборудования" class="img-fluid rounded shadow">
         </div>
         <div class="col-md-6 order-md-1">
             <h2>Техническое обслуживание</h2>
@@ -34,13 +34,13 @@
                 <li><i class="bi bi-check2-circle text-primary me-2"></i>Замена фильтров</li>
                 <li><i class="bi bi-check2-circle text-primary me-2"></i>Проверка безопасности</li>
             </ul>
-            <a href="{{ url_for('contacts') }}" class="btn btn-primary">Заказать обслуживание</a>
+            <a href="{% url 'contacts' %}" class="btn btn-primary">Заказать обслуживание</a>
         </div>
     </div>
 
     <div class="row mb-5">
         <div class="col-md-6">
-            <img src="/static/img/heating-repair.svg" alt="Ремонт котельного оборудования" class="img-fluid rounded shadow">
+            <img src="{% static 'img/heating-repair.svg' %}" alt="Ремонт котельного оборудования" class="img-fluid rounded shadow">
         </div>
         <div class="col-md-6">
             <h2>Ремонт и диагностика</h2>
@@ -51,7 +51,7 @@
                 <li><i class="bi bi-check2-circle text-primary me-2"></i>Диагностика систем</li>
                 <li><i class="bi bi-check2-circle text-primary me-2"></i>Замена комплектующих</li>
             </ul>
-            <a href="{{ url_for('contacts') }}" class="btn btn-primary">Вызвать мастера</a>
+            <a href="{% url 'contacts' %}" class="btn btn-primary">Вызвать мастера</a>
         </div>
     </div>
 </div>
