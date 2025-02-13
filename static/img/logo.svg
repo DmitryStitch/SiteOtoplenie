@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <!-- Фон логотипа -->
+  <rect width="200" height="50" fill="transparent"/>
+  
+  <!-- Текст "ТеплоПро" -->
+  <text x="50" y="35" font-family="Arial" font-weight="bold" font-size="24" fill="#e74c3c">
+    ТеплоПро
+  </text>
+  
+  <!-- Иконка радиатора -->
+  <g transform="translate(10,10) scale(0.6)">
+    <rect x="0" y="0" width="40" height="40" fill="#ffffff" stroke="#34495e" stroke-width="2"/>
+    <!-- Секции радиатора -->
+    <g stroke="#34495e" stroke-width="1">
+      <line x1="8" y1="0" x2="8" y2="40"/>
+      <line x1="16" y1="0" x2="16" y2="40"/>
+      <line x1="24" y1="0" x2="24" y2="40"/>
+      <line x1="32" y1="0" x2="32" y2="40"/>
+    </g>
+    <!-- Тепловые волны -->
+    <path d="M42,10 Q47,15 42,20 Q37,25 42,30" 
+          fill="none" stroke="#e74c3c" stroke-width="2"/>
+  </g>
+</svg>
