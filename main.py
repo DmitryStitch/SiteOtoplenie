@@ -1,4 +1,9 @@
-from app import app
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+import os
+import sys
+from django.core.management import execute_from_command_line
+
+if __name__ == '__main__':
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'heating_project.settings')
+    sys.argv = ['manage.py', 'runserver', '0.0.0.0:5000']
+    execute_from_command_line(sys.argv)
